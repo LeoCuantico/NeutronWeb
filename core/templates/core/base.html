@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>{% block title%} {% endblock %} | Neutron Web</title>
+    <!--AQUI IRA EL CARGADOR DEL FICHERO STATIC QUE TENDRA LOS DATOS QUE NO CAMBIARAN (CSS/IMG/JS,ETC)-->
+    {% load static %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap4 CSS -->
+    <link type="text/css" rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}" >
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    <!-- Bootstrap4 Icon-->
+    <script src="https://kit.fontawesome.com/b097035380.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a href="{% url 'home' %}">
+    <img href="{% url 'home' %}" src="{% static 'core/img/logo.svg' %}" width="45" height="50" class="navbar-brand ml-2 ml-3">
+  </a>
+  <div class="container">
+    <a href="{% url 'home' %}" class="navbar-brand">Neutron Web</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Menu">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <nav class="row container">
+        <div class="col-10 navbar-nav d-flex justify-content-center">
+          <div class="nav-item mx-auto">
+            <a href="{% url 'home' %}" class="nav-link">Home</a>
+          </div>
+          <div class="nav-item mx-auto">
+            <a href="{% url 'diseños' %}" class="nav-link">Diseños</a>
+          </div>
+          <div class="nav-item mx-auto">
+            <a href="{% url 'about' %}" class="nav-link ">Acerca</a>
+          </div>
+          <div class="nav-item mx-auto">
+            <a href="{% url 'contact' %}" class="nav-link">Contacto</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</nav>  
+<!-- End Navbar -->
+    
+<!-- CONTENIDO -->
+{% block content%} {% endblock %}
+
+<!--Footer-->
+<footer class="bg-info text-light rounded border border-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <div class="row d-flex ">
+          <div class="col-sm-12 col-md-6 mt-4 ">
+            <h3 class="text-center font-weight-light"><strong>Contactame</strong></h3>
+            <hr>
+            <p class="text-description text-left">
+              Si te a gustado el proyecto que he desarrollado o te interesa un poco 
+              más de información, no dudes en contacterme
+            </p>
+            <div class="row d-flex justify-content-center">
+              <button type="button" class="btn btn-primary">
+                <a href="{% url 'contact' %}" class="text-white">Contáctame</a>
+              </button>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 mt-4">
+            <h3 class="text-center font-weight-light"><strong>Menú</strong></h3>
+            <hr>
+            <ul class="d-block justify-content-center">
+              <li style="list-style:none" class="my-3"><a href="{% url 'home' %}" class="text-white">Home</a></li>
+                <li style="list-style:none" class="my-3"><a href="{% url 'diseños' %}" class="text-white">Diseños</a></li>
+                <li style="list-style:none" class="my-3"><a href="{% url 'about' %}" class="text-white">Acerca</a></li>
+                <li style="list-style:none" class="my-3"><a href="{% url 'contact' %}" class="text-white">Contacto</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 mt-4">
+        <h3 class="text-center font-weight-light"><strong>Acerca de mí</strong></h3>
+        <hr>
+        <p class="text-description text-left">
+           ¡ Hola ! Tengo 21 años y soy estudiante de 3er año de Ing. civil en Computación
+             de la Universidad Tecnológica Metropolitana UTEM. Realicé este proyecto para dar a conocer 
+             los diseños de ilustaciones que más me gustan.
+        </p>
+      </div>
+    </div>
+    <hr>
+    <div class="row d-flex justify-content-center">
+      <div class="col-auto" >
+        <a href="https://www.facebook.com/LeooDrewLawson">
+          <i class="fab fa-facebook icon text-white"></i>
+        </a>
+      </div>
+      <div class="col-auto">
+        <a href="https://www.instagram.com/charmonium_/">
+          <i class="fab fa-instagram icon text-white"></i>
+        </a>
+      </div>
+      <div class="col-auto">
+        <a href="https://qntumelectrodynamics.tumblr.com/">
+          <i class="fab fa-tumblr-square icon text-white"></i>
+        </a>
+      </div>
+      <div class="col-auto" >
+        <a href="https://github.com/LeoCuantico">
+          <i class="fab fa-github icon text-white"></i>
+        </a>
+      </div>
+      </div>
+      <div class="row d-flex justify-content-center mt-4">
+        <p class="text-center font-weight-light">Copyright
+          <i class="fa fa-copyright" aria-hidden="true"></i>2019 -
+            <a href="https://leoquark.pythonanywhere.com/" class="text-white">Leonardo Peña (Ingeniero Civil Computación)</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+    
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'core/js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'core/js/popper.min.js' %}"></script>
+    <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+    
+  </body>
+</html>

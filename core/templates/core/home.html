@@ -1,0 +1,218 @@
+{% extends "core/base.html" %}
+{% block title %} Home {% endblock  %}
+{% load static %}
+{% block content%}
+
+<br><br><br>
+<div class="container bg-info text-light border border-primary mt-4 shadow p-3 mb-5 rounded">
+    <div class="row">
+        <div class="col-12 mt-4 d-flex justify-content-center">
+            <h3 class="font-weight-light"><strong>Bienvenidos</strong></h3>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <p class="font-weight-normal text-left">
+                ¡ Te invito a visitar mi proyecto de página web !
+            </p>
+            <p> Desarrollé la página utilizando 
+                de Frontend el framework <strong><a href="https://getbootstrap.com/" class="text-white"> Bootstrap 4</a></strong> y
+                de backend utilicé el framework de Python llamado <strong><a href="https://www.djangoproject.com/" class="text-white">Django</a></strong> .
+                Esto con el fin de emplear las últimas tecnológias en el ámbito del desarrollo web, para así desenvolverme de mejor manera 
+                como programador.  
+            </p>          
+            <p>Espero les guste ;)</p>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <p class="font-weight-normal text-left">
+            En Esta pequeña página web, podrá ver los diferentes diseños de dibujos que realizo en mis tiempos libre,
+            además, verás un montón de fotos del universo, constelaciones, nebulosas o simplemente alguna ilustración y/o imagen 
+            que me parezca indispensable no mostrarlas.
+            </p>
+            <p>
+                Por último, podrás ver algo de mi información personal y algunas formas que te brindo para que puedas
+                contactarme. Para eso, presiona uno de estos botones:
+            </p>
+            <div class="row-sm-12 row-md-6 my-3 d-flex justify-content-center">
+                <button type="button" class="btn btn-primary mx-3">
+                    <a href="{% url 'about'%}" class="text-white">Acerca</a>
+                </button>
+                <button type="button" class="btn btn-primary mx-3">
+                    <a href="{% url 'contact'%}" class="text-white">Contacto</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card-columns ">
+                <div class="card shadow mb-5">
+                    <img src="{% static 'core/img/example1.jpg' %}" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Divinidad</h3>
+                        <hr>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard
+                        </p>
+                    <p class="card-footer bg-white"><small class="text-muted d-flex justify-content-center">28-11-2019</small></p>
+                    </div>
+                </div>
+                <div class="card shadow mb-5">
+                    <img src="{% static 'core/img/example2.jpg' %}"  class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Oleaje</h3>
+                        <hr>
+                        <p class="card-text">Dibujo personal extraido de tumblr, el cual refleja lo hermoso que es el océano.
+                        </p>
+                        <p class="card-footer bg-white"><small class="text-muted d-flex justify-content-center">15-02-2019</small></p>
+                    </div>
+                </div>
+                <div class="card shadow mb-5">
+                    <img src="{% static 'core/img/example3.jpg' %}"  class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">The Anti-Christ</h3>
+                        <hr>
+                        <p class="card-text">El demonio que todo ser humano tiene dentro de su ser. Dibujo personal
+                        realizado con tiralineas 0.5
+                        </p>
+                        <p class="card-footer bg-white"><small class="text-muted d-flex justify-content-center">25-12-2018</small></p>
+                    </div>
+                </div>
+                <div class="card shadow mb-5">
+                    <img src="{% static 'core/img/example4.jpg' %}"  class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Cruzadas</h3>
+                        <hr>
+                        <p class="card-text">Un típico soldado de la edad media que arriesga su vida por una entidad sobrenatural impuesta por 
+                        la burguesía para dominarlos. Dibujo personal.
+                        </p>
+                    <p class="card-footer bg-white"><small class="text-muted d-flex justify-content-center">18-09-2017</small></p>
+                    </div>
+                </div>
+                <div class="card shadow mb-5">
+                    <img src="{% static 'core/img/example5.jpg' %}" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Cráneo del Cuervo</h3>
+                        <hr>
+                        <p class="card-text">El poder de la naturaleza de hacer cumplir sus ciclos de la vida, después de la muerte, 
+                        tús atomos se reintegran con el ambiente. Dibujo personal.
+                        </p>
+                        <p class="card-footer bg-white"><small class="text-muted d-flex justify-content-center">24-03-2018</small></p>
+                    </div>
+                </div>
+                <div class="card shadow mb-5">
+                    <img src="{% static 'core/img/example6.jpg' %}"  class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Itachi</h3>
+                        <hr>
+                        <p class="card-text">Una persona que pensó en la integridad y felicidad de los demás, a tal punto de 
+                        ser uno de los peores enemigos de su aldea. Dibujo personal</p>
+                        <p class="card-footer bg-white"><small class="text-muted d-flex justify-content-center">16-05-2019</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<!-- About-me -->
+<div class="container bg-light text-dark border shadow p-3 mb-5 bg-white rounded">
+    <div class="row">
+        <div class="col-sm-12 col-md-3 d-flex my-3 mx-3">
+            <img src="{% static 'core/img/avatar_leo.jpeg' %}" alt="" class="rounded-circle border border-dark">
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-12 col-md-7 my-4 mx-3">
+            <div class="row  d-flex justify-content-start">
+                <h2 class="text-dark"><strong>Leonardo Peña Fuentes</strong></h2>
+            </div>
+            <hr>
+            <div class="row d-flex">
+                <p class="text-dark">
+                Nací en Santiago de Chile, el 24 de marzo de 1998. Cursé la eduación básica 
+                y media en el Colegio Hermanos Carrera, y actualmente soy estudiante de Ingenería 
+                Civil en Computación mención Informática de la Universidad Tecnológica Metropolitana (UTEM).
+                </p>
+                <p class="text-dark">
+                Desde los 16 años me involucré en temas científicos, dado que estos respondían mis 
+                dudas sobre el funcionamiento del universo (micro y macro). Así me familiaricé en temas 
+                como la Astronomía, Cosmología, Computación, Informática, Cuantica, etc ...
+                </p>
+            </div>
+            <div class="row-sm-12 row-md-6 d-flex justify-content">
+                <div class="col-8">
+                    <p><small>Si deseas contáctarme conmigo, visita la seccion de </small></p>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-primary">
+                        <a href="{% url 'contact' %}" class="text-light">Contacto</a>
+                    </button>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Carrusel -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="carousel slide" id="carusel-primary" data-rite="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carusel-primary" data-slide-to="0" class="active"></li>
+                    <li data-target="#carusel-primary" data-slide-to="1"></li>
+                    <li data-target="#carusel-primary" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-caption">
+                            <h3 class="font-weight-light"><strong>Nebulosas</strong></h3>
+                            <p>Las nebulosas son regiones del medio interestelar constituidas 
+                                por gases además de elementos químicos en forma de polvo cósmico.
+                                Generalmente son creadas a travéz de la muerte de las estrellas en forma 
+                                de supernovas.
+                            </p>
+                        </div>
+                        <img src="{% static 'core/img/one.jpg' %}" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <h3 class="font-weight-light"><strong>Galaxias</strong></h3>
+                            <p>
+                                Una galaxia es un conjunto de estrellas, nubes de gas, planetas, polvo cósmico, materia oscura y 
+                                energía unidos gravitatoriamente en una estructura más o menos definida.
+                            </p>
+                        </div>
+                        <img src="{% static 'core/img/two.jpg' %}" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <h3 class="font-weight-light"><strong>Estación Espacial Internacional ISS</strong></h3>
+                            <p>
+                                    es un centro de investigación en la órbita terrestre, cuya administración, gestión 
+                                    y desarrollo están a cargo de la cooperación internacional.
+                                    Considerada como uno de los logros más grandes de la ingeniería. 
+                            </p>
+                        </div>
+                        <img src="{% static 'core/img/three.jpg' %}" alt="">
+                    </div>
+                </div>
+                <a href="#carusel-primary" class="carousel-control-prev" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a href="#carusel-primary" class="carousel-control-next" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+{% endblock %}

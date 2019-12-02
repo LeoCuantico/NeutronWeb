@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+{% block title %} Diseños {% endblock  %}
+
+{% block content %}
+<br><br><br><br>
+<!-- Contenido-->
+<div class="container bg-info text-light border border-primary shadow p-3 mb-5 rounded ">
+    <div class="row">
+        <div class="col-12 mt-4 d-flex justify-content-center">
+            <h3 class="font-weight-light"><strong>Diseños</strong></h3>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+        <p class="font-weight-normal text-left">
+                  En esta sección de la página podrás ver todos los diseños que yo iré subiendo a lo largo del tiempo.
+                  Quiero dejar en claro que sólo algunos de estos diseños son de mi propiedad, es decir, echos por mi.
+                  Pero gran parte de estas ilustraciones las he extraido de Tumblr, Nasa , Pinterest, entre otras plataformas.
+        </p>          
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <p class="font-weight-normal text-left">
+                  Realicé esta sección de Neutron Web con la finalidad de que actue de forma dinámica, es decir, podré 
+                  subir material en cualquier dispositivo, desde cualquier parte, a travéz del panel de administración que
+                  me brinda <strong><a href="https://www.djangoproject.com/" class="text-white">Django</a></strong>.
+                  Así subiré contenido de forma frecuente para que todos tengan acceso a verlas.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- seccion card -->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card-columns ">
+            {% for project in projects %}
+                <div class="card shadow mb-5">
+                    <img src="{{project.image.url}}" alt="" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">{{project.title}}</h3>
+                        <hr>
+                        <p class="card-text">{{project.description}}</p>
+                        <p class="card-footer bg-white"><small class="text-muted d-flex justify-content-center">{{project.created}}</small></p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+{% endblock %}
