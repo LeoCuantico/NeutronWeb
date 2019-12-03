@@ -1,7 +1,8 @@
 from django.db import models
 
 # Create your models here.
-
+# Modelo de datos que serán captados en el panel /admin, datos que serán puestos
+# en cards y mostrados en la pagina en la seccion de /diseños
 class Project(models.Model):
     title = models.CharField(max_length=100 , verbose_name="Titulo")
     description = models.TextField(verbose_name="Descripción")

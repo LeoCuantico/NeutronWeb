@@ -3,6 +3,9 @@ from .forms import ContactForm
 from django.urls import reverse
 from django.core.mail import EmailMessage,send_mail
 # Create your views here.
+# Vista que se encarga del formulario de /contact, esto será a travéz del metodo POST (el cual no muestra datos recaudados
+# en el url, de forma que los pasa "escondidos") ademas dentro del try: se hace el envio del formulario atravez 
+# del metodo send_mail el cual esta importado arriba
 
 def contact(request):
     contact_form = ContactForm() #CREA PANTILLA POST

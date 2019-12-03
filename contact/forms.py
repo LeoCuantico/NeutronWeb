@@ -1,5 +1,8 @@
 from django import forms
 
+# Formulario en django, los cuales captan distintos tipos de datos (char,email,char,en este caso)
+# se ocupan los diseños por defectos de django pero se añaden diseños de Bootstrap en los tributos
+# del modulo "attrs" pasados en forma de "diccionario"
 class ContactForm(forms.Form):
     name = forms.CharField(label="Nombre", required=True, widget=forms.TextInput(
         attrs={
