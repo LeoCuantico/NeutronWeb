@@ -57,34 +57,31 @@
 <footer class="bg-info text-light rounded border border-primary">
   <div class="container">
     <div class="row">
-      <div class="col-6">
-        <div class="row d-flex ">
-          <div class="col-sm-12 col-md-6 mt-4 ">
-            <h3 class="text-center font-weight-light"><strong>Contactame</strong></h3>
-            <hr>
-            <p class="text-description text-left">
-              Si te a gustado el proyecto que he desarrollado o te interesa un poco 
-              más de información, no dudes en contacterme
-            </p>
-            <div class="row d-flex justify-content-center">
-              <button type="button" class="btn btn-primary">
-                <a href="{% url 'contact' %}" class="text-white">Contáctame</a>
-              </button>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 mt-4">
-            <h3 class="text-center font-weight-light"><strong>Menú</strong></h3>
-            <hr>
-            <ul class="d-block justify-content-center">
-              <li style="list-style:none" class="my-3"><a href="{% url 'home' %}" class="text-white">Home</a></li>
-                <li style="list-style:none" class="my-3"><a href="{% url 'diseños' %}" class="text-white">Diseños</a></li>
-                <li style="list-style:none" class="my-3"><a href="{% url 'about' %}" class="text-white">Acerca</a></li>
-                <li style="list-style:none" class="my-3"><a href="{% url 'contact' %}" class="text-white">Contacto</a></li>
-              </ul>
-          </div>
+      <div class="col-sm-12 col-md-4 mt-4">
+        <h3 class="text-center font-weight-light"><strong>¿ Hablamos ?</strong></h3>
+        <hr>
+        <p class="text-description text-left">
+          Si te a gustado el proyecto que he desarrollado o te interesa un poco 
+          más de información ¡no dudes en contacterme! Solo debes rellenar el formulario
+          disponible en la seccion de /contacto, o presiona el boton de aqui abajo.
+        </p>
+        <div class="row d-flex justify-content-center">
+          <button type="button" class="btn btn-primary">
+            <a href="{% url 'contact' %}" class="text-white">Contáctame</a>
+          </button>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 mt-4">
+      <div class="col-sm-12 col-md-4 mt-4">
+        <h3 class="text-center font-weight-light"><strong>Menú</strong></h3>
+        <hr>
+        <ul class="d-block justify-content-center">
+          <li style="list-style:none" class="my-3"><a href="{% url 'home' %}" class="text-white">Home</a></li>
+          <li style="list-style:none" class="my-3"><a href="{% url 'diseños' %}" class="text-white">Diseños</a></li>
+          <li style="list-style:none" class="my-3"><a href="{% url 'about' %}" class="text-white">Acerca</a></li>
+          <li style="list-style:none" class="my-3"><a href="{% url 'contact' %}" class="text-white">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-12 col-md-4 mt-4">
         <h3 class="text-center font-weight-light"><strong>Acerca de mí</strong></h3>
         <hr>
         <p class="text-description text-left">
